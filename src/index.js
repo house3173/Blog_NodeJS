@@ -6,7 +6,7 @@ const app = express()
 const port = 3000
 
 // Static file
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 // HTTP logger
 app.use(morgan('combined'))
