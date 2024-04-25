@@ -6,7 +6,12 @@ const { log } = require('console');
 const exp = require('constants');
 const app = express();
 const port = 3000;
+
 const route = require('./routes/index');
+const db = require('./config/db')
+
+// Coonect to DB
+db.connect();
 
 // Static file
 app.use(express.static('public'));
@@ -22,7 +27,7 @@ app.engine(
     }),
 );
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources\\views'));
+app.set('views', path.join(__dirname, 'resources', 'views'));
 
 app.use(
     express.urlencoded({
