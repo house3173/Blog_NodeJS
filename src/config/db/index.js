@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 async function connect() {
     try {
         await mongoose.connect('mongodb://localhost:27017/house_education_dev');
-        console.log('Connect successfully!')
+        console.log('Connect successfully!');
     } catch (error) {
-        console.log('Connect failue!')
+        console.log('Connect failue!');
     }
 }
 
-module.exports = { connect }
+module.exports = { connect };
