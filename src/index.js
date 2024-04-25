@@ -6,7 +6,7 @@ const { log } = require('console');
 const exp = require('constants');
 const app = express()
 const port = 3000
-const route = require('./routes')
+const route = require('./routes/index')
 
 // Static file
 app.use(express.static('public'));
